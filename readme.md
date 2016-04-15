@@ -10,7 +10,7 @@ Comenzar a aprender y usar Vue.js resulta tan sencillo y divertido como desarrol
 
 *   [2\. Introducción a las directivas de Vue.js con v-if, v-show y v-else](https://styde.net/introduccion-a-las-directivas-de-vue-js-con-v-if-v-show-y-v-else/) - 14:11
 
-*   [3\. Clases, estilos y otros atributos dinámicos usando la directiva v-bind de Vue.js]()
+*   [3\. Clases, estilos y otros atributos dinámicos usando la directiva v-bind de Vue.js]
 
 
 
