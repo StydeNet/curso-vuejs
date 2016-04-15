@@ -8,7 +8,10 @@ Comenzar a aprender y usar Vue.js resulta tan sencillo y divertido como desarrol
 
 *   [1\. Instalación y primeros pasos con Vue.js](https://styde.net/introduccion-a-vue-js/#more-9792) - 14:26
 
-*   [2\. ntroducción a las directivas de Vue.js ]() 
+*   [2\. Introducción a las directivas de Vue.js con v-if, v-show y v-else](https://styde.net/introduccion-a-las-directivas-de-vue-js-con-v-if-v-show-y-v-else/) - 14:11
+
+*   [3\. Clases, estilos y otros atributos dinámicos usando la directiva v-bind de Vue.js]()
+
 
 
 #### Otros cursos
