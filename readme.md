@@ -11,6 +11,7 @@ Comenzar a aprender y usar Vue.js resulta tan sencillo y divertido como desarrol
  3. [Métodos y manejo de eventos con v-on:click y submit](https://styde.net/metodos-y-manejo-de-eventos-con-v-onclick-y-submit/) - 14:46
  4. [Clases, estilos y otros atributos dinámicos usando la directiva v-bind de Vue.js](https://styde.net/clases-estilos-y-otros-atributos-dinamicos-usando-la-directiva-v-bind-de-vue-js/) - 11:54
  
+  
   **(En desarrollo)**
 
 
