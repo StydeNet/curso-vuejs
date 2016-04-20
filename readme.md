@@ -8,7 +8,7 @@ Comenzar a aprender y usar Vue.js resulta tan sencillo y divertido como desarrol
 
  1. [ Instalación y primeros pasos con Vue.js](https://styde.net/introduccion-a-vue-js/#more-9792) - 14:26
  2. [Introducción a las directivas de Vue.js con v-if, v-show y v-else](https://styde.net/introduccion-a-las-directivas-de-vue-js-con-v-if-v-show-y-v-else/) - 14:11
- 3. [Métodos y manejo de eventos con v-on:click y submit](https://styde.net/metodos-y-manejo-de-eventos-con-v-onclick-y-submit/) - 14:46 -
+ 3. [Métodos y manejo de eventos con v-on:click y submit](https://styde.net/metodos-y-manejo-de-eventos-con-v-onclick-y-submit/) - 14:46
  4. [Clases, estilos y otros atributos dinámicos usando la directiva v-bind de Vue.js](https://styde.net/clases-estilos-y-otros-atributos-dinamicos-usando-la-directiva-v-bind-de-vue-js/) - 11:54
  
   **(En desarrollo)**
