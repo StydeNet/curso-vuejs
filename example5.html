@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Styde.net | Curso de VueJS</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <script src="vue.js"></script>
+
+    </head>
+    <body id="app">
+
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+
+            <template v-if="name">
+                <welcome-message :name="name" :gender="gender"></welcome-message>
+
+                <p>Espero que disfrutes tu visita</p>
+                <p>Tu nombre al revés es: {{ name.split('').reverse().join('') }}
+            </template>
+            <p v-else>Por favor escribe tu nombre:</p>
+
+            <form @submit="signUp(false, $event)">
+                <input type="text" v-model="name" class="form-control">
+
+                <p v-if="name == ''" class="alert alert-danger">
+                    Este campo es obligatorio
+                </p>
+
+                <label>
+                    Hombre: <input type="radio" v-model="gender" value="m">
+                </label>
+
+                <label>
+                    Mujer: <input type="radio" v-model="gender" value="f">
+                </label>
+
+                <years-exp :years.sync="years_php" tech="PHP"></years-exp>
+                <years-exp :years.sync="years_js" tech="JS"></years-exp>
+
+                <hr>
+
+                <p v-show="name">
+                    <button type="submit" class="btn btn-primary">
+                        Regístrate
+                    </button>
+
+                    <button type="submit" class="btn btn-primary" @click="signUp(true, $event)">
+                        Regístrate y sal del sistema
+                    </button>
+                </p>
+            </form>
+
+            <hello-world></hello-world>
+
+            <hr>
+
+            <pre>{{ $data | json }}</pre>
+        </div>
+    </div>
+
+    <script type="text/template" id="welcome_template">
+        <h1>{{ gender == 'm' ? 'Bienvenido' : 'Bienvenida' }}, {{ name }}</h1>
+    </script>
+
+    <script type="text/template" id="years_template">
+        <p>¿Cuántos años de experiencia tienes con {{ tech }}?</p>
+
+        <p>
+            Respuesta: <strong>{{ years }}</strong>
+
+            <button type="button"
+                    class="btn"
+                    @click="add">+</button>
+
+            <button type="button"
+                    :disabled="years == 0"
+                    class="btn"
+                    @click="sub">-</button>
+        </p>
+    </script>
+
+    <script type="text/javascript">
+
+        Vue.component('hello-world', {
+            template: '<h2>Hello world</h2>',
+        });
+
+        Vue.component('welcome-message', {
+            template: '#welcome_template',
+            props: {
+                gender: {type: String, required: false, default: 'm'},
+                name: {type: String, required: true}
+            }
+        });
+
+        Vue.component('years-exp', {
+            template: '#years_template',
+            methods: {
+                add: function () {
+                    this.years++;
+                },
+                sub: function () {
+                    this.years--;
+                },
+            },
+            props: ['years', 'tech']
+        });
+
+        new Vue({
+            el: "#app",
+            data: {
+                name: "",
+                gender: 'm',
+                years_php: 0,
+                years_js: 0,
+            },
+            methods: {
+                signUp: function (logout, event) {
+                    event.preventDefault();
+
+                    alert(this.name + ', por favor espera mientras te registramos.');
+
+                    if (logout) {
+                        alert("Saliendo del sistema...");
+                    }
+                },
+            }
+        });
+    </script>
+    </body>
+</html>
+
+
+
+
+
