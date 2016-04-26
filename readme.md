@@ -1,17 +1,32 @@
 ### [Styde](https://styde.net/)
 
-Styde es una nueva comunidad de desarrollo web en espaÒol. Con nosotros podr·s aprender Laravel, PHP y otras tecnologÌas, desde tutoriales b·sicos gratuitos hasta cursos avanzados a bajo costo, de la mano de profesionales con aÒos de experiencia.
+Styde es una nueva comunidad de desarrollo web en espa√±ol. Con nosotros podr√°s aprender Laravel, PHP y otras tecnolog√≠as, desde tutoriales b√°sicos gratuitos hasta cursos avanzados a bajo costo, de la mano de profesionales con a√±os de experiencia.
 
 # Curso de Vue.js
 
-Comenzar a aprender y usar Vue.js resulta tan sencillo y divertido como desarrollar con Laravel. Es por ello que la comunidad de nuestro framework favorito de PHP, ha recibido con los brazos abiertos a Vue; de hecho, actualmente Laracasts tiene 2 cursos de Vue, Taylor Otwell lo est· utilizando para desarrollar Spark, y cada vez hay m·s noticias, tutoriales y artÌculos de este framework de JavaScript.
+Comenzar a aprender y usar Vue.js resulta tan sencillo y divertido como desarrollar con Laravel. Es por ello que la comunidad de nuestro framework favorito de PHP, ha recibido con los brazos abiertos a Vue; de hecho, actualmente Laracasts tiene 2 cursos de Vue, Taylor Otwell lo est√° utilizando para desarrollar Spark, y cada vez hay m√°s noticias, tutoriales y art√≠culos de este framework de JavaScript.
 
-*   [1\. InstalaciÛn y primeros pasos con Vue.js](https://styde.net/introduccion-a-vue-js/#more-9792) - 14:26
+1. [Instalaci√≥n y primeros pasos con Vue.js](https://styde.net/introduccion-a-vue-js/#more-9792) - 14:26
 
-*   [2\. IntroducciÛn a las directivas de Vue.js con v-if, v-show y v-else](https://styde.net/introduccion-a-las-directivas-de-vue-js-con-v-if-v-show-y-v-else/) - 14:11
+2. [Introducci√≥n a las directivas de Vue.js con v-if, v-show y v-else](https://styde.net/introduccion-a-las-directivas-de-vue-js-con-v-if-v-show-y-v-else/) - 14:11
 
-*   3\. Clases, estilos y otros atributos din·micos usando la directiva v-bind de Vue.js
-*  **En desarrollo..**
+3. [Clases, estilos y otros atributos din√°micos usando la directiva v-bind de Vue.js](https://styde.net/metodos-y-manejo-de-eventos-con-v-onclick-y-submit/) - 14:45
+
+4. [Atributos HTML, clases y estilos de CSS din√°micos con v-bind](https://styde.net/clases-estilos-y-otros-atributos-dinamicos-usando-la-directiva-v-bind-de-vue-js/) - 11:53
+
+5. [Introducci√≥n a los componentes con Vue.js](https://styde.net/introduccion-a-los-componente-en-vue-js/) - 17:47
+
+6. Listas con v-for
+
+7. Computed properties
+
+8. Introducci√≥n a los filtros con Vue.js
+
+9. Repaso de lo aprendido hasta ahora
+
+10. Laravel + Vue.js = ‚ô•
+
+> Este curso se encuentra en desarrollo, por favor regresa cada semana para ver las nuevas lecciones
 
 
 
@@ -20,15 +35,15 @@ Comenzar a aprender y usar Vue.js resulta tan sencillo y divertido como desarrol
 **Laravel desde cero**
  -    [Primeros pasos con Laravel 5.*](https://styde.net/curso-primeros-pasos-con-laravel-5/)
  -    [                        Curso de Laravel 5.1                    ](https://styde.net/curso-introductorio-laravel-5-1/)
- -  [                        Crea una aplicaciÛn con Laravel 5                    ](https://styde.net/curso-crea-aplicaciones-con-laravel-5/)
- -   [                        Curso b·sico de Eloquent ORM                    ](https://styde.net/curso-basico-de-eloquent-orm-con-laravel-5-1/)
+ -  [                        Crea una aplicaci√≥n con Laravel 5                    ](https://styde.net/curso-crea-aplicaciones-con-laravel-5/)
+ -   [                        Curso b√°sico de Eloquent ORM                    ](https://styde.net/curso-basico-de-eloquent-orm-con-laravel-5-1/)
 
 
 **Laravel y PHP avanzado**
- - [                        Curso de administraciÛn de servidores para PHP y Laravel                    ](https://styde.net/curso-configuracion-administracion-de-servidores-php-laravel/)
+ - [                        Curso de administraci√≥n de servidores para PHP y Laravel                    ](https://styde.net/curso-configuracion-administracion-de-servidores-php-laravel/)
  -   [                        Curso avanzado de Eloquent ORM                    ](https://styde.net/curso-avanzado-de-eloquent-orm/)
  - [                        Crea componentes para PHP                    ](https://styde.net/curso-crea-componentes-para-php-y-laravel/)
- -   [                        Interfaces din·micas con Laravel y jQuery                    ](https://styde.net/curso-de-interfaces-dinamicas-con-laravel-y-jquery/)
+ -   [                        Interfaces din√°micas con Laravel y jQuery                    ](https://styde.net/curso-de-interfaces-dinamicas-con-laravel-y-jquery/)
 
-**Otras tecnologÌas**
- -   [Curso: Gulp y herramientas de automatizaciÛn](https://styde.net/curso-gulp-y-herramientas-de-automatizacion/)
+**Otras tecnolog√≠as**
+ -   [Curso: Gulp y herramientas de automatizaci√≥n](https://styde.net/curso-gulp-y-herramientas-de-automatizacion/)
