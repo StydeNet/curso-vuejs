@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Styde.net | Curso de VueJS</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+        <script src="vue.js"></script>
+    </head>
+    <body>
+      <h1>Hello, Vue!</h1>
+
+      <ul v-for="note in notes">
+          <li>{{ $index + 1 }}: {{ note.text }} por {{ note.author }}</li>
+      </ul>
+
+      <hr>
+
+      <form @submit.prevent="createNote" class="form">
+        <textarea v-model="new_note.text" class="form-control"></textarea>
+
+        <button type="submit" class="btn btn-primary">Agregar nota</button>
+      </form>
+
+      <script>
+          new Vue({
+              el: 'body',
+              data: {
+                  notes: [
+                      {
+                        text: 'v-for es la directiva que utilizamos para iterar una lista',
+                        author: 'Duilio'
+                      },
+                      {
+                        text: '@click se utiliza como un alias de v-on:click',
+                        author: 'Sileence'
+                      },
+                      {
+                        text: 'Con Vue puedes crear tus propios componentes',
+                        author: 'Styde'
+                      }
+                  ],
+                  new_note: {text: '', author: 'Duilio'}
+              },
+              methods: {
+                  createNote: function () {
+                      this.notes.push(this.new_note);
+
+                      this.new_note = {text: '', author: 'Duilio'};
+                  }
+              }
+          });
+      </script>
+    </body>
+</html>
+
+
+
