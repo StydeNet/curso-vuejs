@@ -16,7 +16,7 @@ Comenzar a aprender y usar Vue.js resulta tan sencillo y divertido como desarrol
 
 5. [Introducción a los componentes con Vue.js](https://styde.net/introduccion-a-los-componente-en-vue-js/) - 17:47
 
-6. Listas con v-for
+6. [Crear listas con la directiva v-for](https://styde.net/crear-listas-con-la-directiva-v-for-de-vue-js/) - 11:18
 
 7. Computed properties
 
