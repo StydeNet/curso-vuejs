@@ -18,7 +18,7 @@ Comenzar a aprender y usar Vue.js resulta tan sencillo y divertido como desarrol
 
 6. [Crear listas con la directiva v-for](https://styde.net/crear-listas-con-la-directiva-v-for-de-vue-js/) - 11:18
 
-7. [Computed properties](https://styde.net/computed-properties-en-vue-js/) 13:05
+7. [Computed properties](https://styde.net/computed-properties-en-vue-js/) - 13:05
 
 8. Introducción a los filtros con Vue.js
 
