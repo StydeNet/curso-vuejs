@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>VueJS demo</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+	<script src="vue.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body id="app">
+	<br>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<template v-if="full_name">
+							<h1>{{ welcome_message }} {{ full_name }}</h1>
+							<p>Esperamos que disfrutes tu visita</p>
+							<p>Tu nombre al revés es: <b>{{ reverse_name }}</b></p>
+						</template>
+						<template v-if="!full_name || !age">
+							<ul class="alert alert-danger">
+								<li v-if="!full_name">El nombre es obligatorio, por favor ingresa tu nombre y/o apellido</li>
+								<li v-if="!age">El campo edad es obligatorio</li>
+							</ul>
+							<p>Por favor ingresa tu nombre...</p>
+						</template>
+						
+						<form @submit.prevent="signUp(false)">
+							<div class="form-group" :class="{'has-error': !first_name}">
+								<label for="first_name" class="control-label">Nombre</label>
+								<input v-model="first_name" type="text" placeholder="Nombre..." class="form-control">
+							</div>
+							<div class="form-group" :class="{'has-error': !last_name}">
+								<label for="last_name" class="control-label">Apellido</label>
+								<input v-model="last_name" type="text" placeholder="Nombre..." class="form-control">
+							</div>
+							<div class="form-group" :class="{'has-error': age == ''}">
+								<label for="age" class="control-label">Edad</label>
+								<input v-model="age" placeholder="Edad..." class="form-control" number>
+							</div>
+							<div class="form-group">
+								<label for="radios">Genero</label>
+								<div class="radio">
+									<label>
+										<input v-model="gender" type="radio" value="m">
+										Masculino
+									</label>
+								</div>
+								<div class="radio">
+									<label>
+										<input v-model="gender" type="radio" value="f">
+										Femenino
+									</label>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="spanish-checkbox">¿Hablas español?</label>
+								<input id="spanish-checkbox" type="checkbox" v-model="spanish">
+							</div>
+							<hr>
+							<h4>Nueva tecnologia</h4>
+							<div class="form-group">
+								<label for="name">Nombre de la tecnología:</label>
+								<input type="text" id="name" v-model="new_tech.name" class="form-control">
+							</div>
+							<div class="form-group">
+								<button @click.prevent="createTech" type="button" class="btn btn-primary">
+									<i class="fa fa-plus"></i>&nbsp;
+									Agregar tecnología
+								</button>
+							</div>
+							<hr>
+							<h3>Tecnologías</h3>
+							<years-exp v-for="techno in techs" :years.sync="techno.years" :tech="techno.name"></years-exp>
+
+							<template id="years-template">
+								<label for="name" class="control-label">¿Cuantos años tienes programando en {{ tech }}?</label>
+								<div class="form-group">
+									Respuesta: <strong>{{ years }}</strong>
+									<button @click="add" type="button" 
+										:class="{btn: true, 'btn-sm': true, 'btn-primary': true, 'btn-success': years > 5}">
+										<i class="fa fa-chevron-up"></i>
+									</button>
+									
+									<button @click="sub" :disabled="!years" type="button" 
+										:class="{btn: true, 'btn-sm': true, 'btn-primary': true, 'btn-danger': !years}">
+										<i class="fa fa-chevron-down"></i>
+									</button>
+								</div>
+								<div class="form-group">
+									Nivel: <strong class="text-primary">{{ nivel }}</strong>
+								</div>
+							</template>
+							
+							<div class="form-group">
+								<p v-show="name">
+									<button type="submit" class="btn btn-primary">Regístrate</button>
+									<button @click="signUp(true)" type="button" class="btn btn-success">Regístrate y salir del sistema</button>
+								</p>
+							</div>
+						</form>
+					</div>
+				</div>
+				<hr>
+				<pre>{{ $data | json }}</pre>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		Vue.component('years-exp', {
+			template: "#years-template",
+			methods: {
+				add: function() {
+					this.years++;
+				},
+				sub: function() {
+					if (this.years > 0) {
+						this.years--;
+					}
+				}
+			},
+			props: ['tech', 'years'],
+			computed: {
+				nivel: function() {
+					if (this.years > 5) {
+						return "Experto";
+					}
+					if (this.years > 2) {
+						return "Intermedio";
+					} else {
+						return "Principiante";
+					}
+				}
+			}
+		});
+		
+		new Vue({
+			el: "#app",
+			data: {
+				first_name: "Rafael",
+				last_name: "Cuevas",
+				age: 23,
+				spanish: true,
+				gender: "m",
+				new_tech: {name: "", years: 0},
+				techs: [
+					{ name: "PHP", years: 0 },
+					{ name: "JS", years: 0 },
+				]
+			},
+			computed: {
+				full_name: function() {
+					if (this.first_name || this.last_name) {
+						return this.first_name + ' ' + this.last_name;
+					}
+					return "";
+				},
+				reverse_name: function() {
+					return this.full_name.split('').reverse().join('')
+				},
+				welcome_message: function() {
+					if (this.spanish) {
+						return this.gender == 'm' ? 'Bienvenido' : 'Bienvenida';
+					}
+					return "Welcome";
+				}
+			},
+			methods: {
+				signUp: function(logout) {
+					alert(this.name + ', por favor espera mientras se lleva a cabo el registro.');
+					if (logout) {
+						alert('Saliendo del sistema...');
+					}
+				},
+				createTech: function() {
+					if (this.new_tech.name.trim() === "") {
+						this.new_tech.name = "";
+						alert('La tecnologia que tratas de agregar no tiene nombre');
+						return false;
+					}
+					this.techs.push(this.new_tech);
+					this.new_tech = {name: "", years: 0};
+				}
+			}
+		});
+	</script>
+</body>
+</html>
