@@ -23,7 +23,7 @@
                 </h1>
 
                 <p>Espero que disfrutes tu visita</p>
-                <p>Tu nombre al revés es: {{ name.split('').reverse().join('') }}
+                <p>Tu nombre al revés es: {{ reverse_name }}
             </template>
             <p v-else>Por favor escribe tu nombre:</p>
 
@@ -54,7 +54,7 @@
                     <years-exp :years="tech.years" :tech="tech.name"></years-exp>
                 </template>
 
-                <hr>
+               <br>
 
                 <p v-show="name">
                     <button type="submit" class="btn btn-primary">
@@ -67,7 +67,7 @@
                 </p>
             </form>
 
-            <hr>
+           <br>
 
             <pre>{{ $data | json }}</pre>
         </div>
@@ -88,7 +88,8 @@
                     class="btn"
                     @click="sub">-</button>
 
-            <span>Nivel:</span><strong>{{ level_experience }}</strong>
+        <span v-show="level_experience">Nivel:</span><strong>{{ level_experience }}</strong>
+        
         </p>
 
         
@@ -131,6 +132,8 @@
                 techs: [
                     {name: 'PHP', years: 0},
                     {name: 'JS', years: 0},
+                    {name: 'HTML', years: 0},
+                    {name: 'CSS', years: 0}
                 ]
             },
             computed: {
@@ -172,8 +175,3 @@
     </script>
     </body>
 </html>
-
-
-
-
-
