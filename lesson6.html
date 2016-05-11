@@ -14,8 +14,8 @@
     <body>
       <h1>Hello, Vue!</h1>
 
-      <ul v-for="note in notes">
-          <li>{{ $index + 1 }}: {{ note.text }} por {{ note.author }}</li>
+      <ul>
+          <li v-for="note in notes">{{ $index + 1 }}: {{ note.text }} por {{ note.author }}</li>
       </ul>
 
       <hr>
