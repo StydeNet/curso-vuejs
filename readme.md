@@ -20,7 +20,7 @@ Comenzar a aprender y usar Vue.js resulta tan sencillo y divertido como desarrol
 
 7. [Computed properties](https://styde.net/computed-properties-en-vue-js/) - 13:05
 
-8. Introducción a los filtros con Vue.js
+8. [Uso y creación de filtros](https://styde.net/filtros-en-vue-js/) - 9:20
 
 9. Repaso de lo aprendido hasta ahora
 
@@ -33,17 +33,22 @@ Comenzar a aprender y usar Vue.js resulta tan sencillo y divertido como desarrol
 #### Otros cursos
 
 **Laravel desde cero**
- -    [Primeros pasos con Laravel 5.*](https://styde.net/curso-primeros-pasos-con-laravel-5/)
- -    [                        Curso de Laravel 5.1                    ](https://styde.net/curso-introductorio-laravel-5-1/)
- -  [                        Crea una aplicación con Laravel 5                    ](https://styde.net/curso-crea-aplicaciones-con-laravel-5/)
- -   [                        Curso básico de Eloquent ORM                    ](https://styde.net/curso-basico-de-eloquent-orm-con-laravel-5-1/)
+ -   [Primeros pasos con Laravel 5.*](https://styde.net/curso-primeros-pasos-con-laravel-5/)
+ -   [Curso de Laravel 5.1](https://styde.net/curso-introductorio-laravel-5-1/)
+ -   [Crea una aplicación con Laravel 5](https://styde.net/curso-crea-aplicaciones-con-laravel-5/)
+ -   [Curso básico de Eloquent ORM](https://styde.net/curso-basico-de-eloquent-orm-con-laravel-5-1/)
 
 
 **Laravel y PHP avanzado**
- - [                        Curso de administración de servidores para PHP y Laravel                    ](https://styde.net/curso-configuracion-administracion-de-servidores-php-laravel/)
- -   [                        Curso avanzado de Eloquent ORM                    ](https://styde.net/curso-avanzado-de-eloquent-orm/)
- - [                        Crea componentes para PHP                    ](https://styde.net/curso-crea-componentes-para-php-y-laravel/)
- -   [                        Interfaces dinámicas con Laravel y jQuery                    ](https://styde.net/curso-de-interfaces-dinamicas-con-laravel-y-jquery/)
+ -   [Curso de administración de servidores para PHP y Laravel](https://styde.net/curso-configuracion-administracion-de-servidores-php-laravel/)
+ -   [Curso avanzado de Eloquent ORM](https://styde.net/curso-avanzado-de-eloquent-orm/)
+ -   [Crea componentes para PHP](https://styde.net/curso-crea-componentes-para-php-y-laravel/)
+ -   [Interfaces dinámicas con Laravel y jQuery](https://styde.net/curso-de-interfaces-dinamicas-con-laravel-y-jquery/)
 
 **Otras tecnologías**
- -   [Curso: Gulp y herramientas de automatización](https://styde.net/curso-gulp-y-herramientas-de-automatizacion/)
+-   [Curso de Gulp](https://styde.net/curso-gulp-y-herramientas-de-automatizacion/)
+-   [Curso de Vue.js](https://styde.net/curso-de-vue-js/)
+-	[Curso de Sass](https://styde.net/curso-de-sass/)
+-	[Curso básico de Swift](https://styde.net/curso-basico-de-swift/)
+
+© 2016 [Styde.net](https://styde.net/)
