@@ -6,25 +6,45 @@ Styde es una nueva comunidad de desarrollo web en español. Con nosotros podrás
 
 Comenzar a aprender y usar Vue.js resulta tan sencillo y divertido como desarrollar con Laravel. Es por ello que la comunidad de nuestro framework favorito de PHP, ha recibido con los brazos abiertos a Vue; de hecho, actualmente Laracasts tiene 2 cursos de Vue, Taylor Otwell lo está utilizando para desarrollar Spark, y cada vez hay más noticias, tutoriales y artículos de este framework de JavaScript.
 
-1. [Instalación y primeros pasos con Vue.js](https://styde.net/introduccion-a-vue-js/#more-9792) - 14:26
+## Parte 1: Fundamentos de Vue.js
 
-2. [Introducción a las directivas de Vue.js con v-if, v-show y v-else](https://styde.net/introduccion-a-las-directivas-de-vue-js-con-v-if-v-show-y-v-else/) - 14:11
+En esta primera parte, aprenderás a utilizar Vue.js desde un ejemplo de hola mundo, hasta la creación de tus propios componentes.
 
-3. [Clases, estilos y otros atributos dinámicos usando la directiva v-bind de Vue.js](https://styde.net/metodos-y-manejo-de-eventos-con-v-onclick-y-submit/) - 14:45
+*  [Instalación y primeros pasos con Vue.js](https://styde.net/introduccion-a-vue-js/#more-9792) - 14:26
 
-4. [Atributos HTML, clases y estilos de CSS dinámicos con v-bind](https://styde.net/clases-estilos-y-otros-atributos-dinamicos-usando-la-directiva-v-bind-de-vue-js/) - 11:53
+*  [Introducción a las directivas de Vue.js con v-if, v-show y v-else](https://styde.net/introduccion-a-las-directivas-de-vue-js-con-v-if-v-show-y-v-else/) - 14:11
 
-5. [Introducción a los componentes con Vue.js](https://styde.net/introduccion-a-los-componente-en-vue-js/) - 17:47
+*  [Clases, estilos y otros atributos dinámicos usando la directiva v-bind de Vue.js](https://styde.net/metodos-y-manejo-de-eventos-con-v-onclick-y-submit/) - 14:45
 
-6. [Crear listas con la directiva v-for](https://styde.net/crear-listas-con-la-directiva-v-for-de-vue-js/) - 11:18
+*  [Atributos HTML, clases y estilos de CSS dinámicos con v-bind](https://styde.net/clases-estilos-y-otros-atributos-dinamicos-usando-la-directiva-v-bind-de-vue-js/) - 11:53
 
-7. [Computed properties](https://styde.net/computed-properties-en-vue-js/) - 13:05
+*  [Introducción a los componentes con Vue.js](https://styde.net/introduccion-a-los-componente-en-vue-js/) - 17:47
 
-8. [Uso y creación de filtros](https://styde.net/filtros-en-vue-js/) - 9:20
+*  [Crear listas con la directiva v-for](https://styde.net/crear-listas-con-la-directiva-v-for-de-vue-js/) - 11:18
 
-9. Repaso de lo aprendido hasta ahora
+*  [Computed properties](https://styde.net/computed-properties-en-vue-js/) - 13:05
 
-10. Laravel + Vue.js = ♥
+*  [Uso y creación de filtros](https://styde.net/filtros-en-vue-js/) - 9:20
+
+*  [Repaso de interpolaciones, filtros y directivas](https://styde.net/:interpolaciones-v-for-v-if-metodos-y-filtros-con-vue-js/) - 18:49
+
+*  [Repaso de componentes](https://styde.net/repaso-de-creacion-y-uso-de-componentes-en-vue-js/) - 20:28
+
+## Parte 2: Crea un API con Laravel 5.2
+
+En esta segunda parte desarrollaremos el API para el módulo de notas, que en la tercera parte implementaremos en nuestro proyecto en Vue.js.
+
+*  [Configuración del proyecto](https://styde.net/desarrollo-del-api-con-laravel-5-2-configuracion-del-proyecto/) - 7:07
+
+*  [API para listar notas](https://styde.net/desarrollo-del-api-con-laravel-5-2-listar-notas/) - 16:10
+
+*  ¡Más lecciones en pocos días!
+
+## Parte 3: Laravel + AJAX + Vue.js
+
+En esta tercera parte del curso, vamos a consumir una API con Vue.js para finalizar el desarrollo de nuestro módulo CRUD de notas totalmente en AJAX.
+
+*  ¡Pronto, más lecciones!
 
 > Este curso se encuentra en desarrollo, por favor regresa cada semana para ver las nuevas lecciones
 
