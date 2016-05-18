@@ -38,13 +38,19 @@ En esta segunda parte desarrollaremos el API para el módulo de notas, que en la
 
 *  [API para listar notas](https://styde.net/desarrollo-del-api-con-laravel-5-2-listar-notas/) - 16:10
 
-*  ¡Más lecciones en pocos días!
+*  [Creación de registros a través de un API](https://styde.net/creacion-de-registros-a-traves-de-un-api-con-laravel-5-2/) - 20:26
+
+*  Actualizar y eliminar registros a través de un API
 
 ## Parte 3: Laravel + AJAX + Vue.js
 
 En esta tercera parte del curso, vamos a consumir una API con Vue.js para finalizar el desarrollo de nuestro módulo CRUD de notas totalmente en AJAX.
 
-*  ¡Pronto, más lecciones!
+*  Laravel + Vue.js = ♥
+
+*  Crear registros con Vue.js y Laravel
+
+*  Actualizar notas con Laravel y Vue.js
 
 > Este curso se encuentra en desarrollo, por favor regresa cada semana para ver las nuevas lecciones
 
