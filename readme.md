@@ -40,7 +40,7 @@ En esta segunda parte desarrollaremos el API para el módulo de notas, que en la
 
 *  [Creación de registros a través de un API](https://styde.net/creacion-de-registros-a-traves-de-un-api-con-laravel-5-2/) - 20:26
 
-*  Actualizar y eliminar registros a través de un API
+*  [Actualizar y eliminar registros a través de un API](https://styde.net/actualizar-y-eliminar-registros-a-traves-de-un-api-con-laravel-5-2/) - 17:31
 
 ## Parte 3: Laravel + AJAX + Vue.js
 
