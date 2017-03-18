@@ -23,7 +23,7 @@
                 </h1>
 
                 <p>Espero que disfrutes tu visita</p>
-                <p>Tu nombre al revés es: {{ name.split('').reverse().join('') }}
+                <p>Tu nombre al revés es: {{ reverse_name }}
             </template>
             <p v-else>Por favor escribe tu nombre:</p>
 
@@ -45,16 +45,27 @@
                     Mujer: <input type="radio" v-model="gender" value="f">
                 </label>
 
+                <hr>
+
                 <label>
                     ¿Hablas español? 
                     <input v-model="spanish" type="checkbox">
                 </label>
 
+                <hr>
+
+                <form class="form">
+                    <textarea v-model="new_tech.name" class="form-control"></textarea>
+                    <button @click.prevent="addTech" type="submit" class="btn btn-primary">Agregar Tecnología</button>
+                </form>
+
+                <br>
+
                 <template v-for="tech in techs">
                     <years-exp :years="tech.years" :tech="tech.name"></years-exp>
                 </template>
 
-                <hr>
+                <br>
 
                 <p v-show="name">
                     <button type="submit" class="btn btn-primary">
@@ -88,6 +99,9 @@
                     class="btn"
                     @click="sub">-</button>
         </p>
+        <div class="form-group">
+            <strong class="text-primary">{{ exp_level }}</strong>
+        </div>
     </script>
 
     <script type="text/javascript">
@@ -102,7 +116,20 @@
                     this.years--;
                 },
             },
-            props: ['years', 'tech']
+            props: ['years', 'tech'],
+            computed: {
+                exp_level: function () {
+                    if (this.years > 5) {
+                        return 'Experto'
+                    } if (this.years > 2) {
+                        return 'Intermedio'
+                    } if (this.years > 0) {
+                        return 'Principiante';
+                    } else {
+                        return " "
+                    }
+                }
+            }
         });
 
         new Vue({
@@ -115,7 +142,8 @@
                 techs: [
                     {name: 'PHP', years: 0},
                     {name: 'JS', years: 0},
-                ]
+                ],
+                new_tech: {name: '', years: 0}
             },
             computed: {
                 welcome_message: function () {
@@ -125,6 +153,9 @@
                     }
 
                     return 'Welcome';
+                },
+                reverse_name: function () {
+                    return this.name.split('').reverse().join('')
                 },
                 name: function () {
                     if (this.first_name || this.last_name) {
@@ -144,13 +175,12 @@
                         alert("Saliendo del sistema...");
                     }
                 },
+                addTech: function() {
+                    this.techs.push(this.new_tech);
+                    this.new_tech = {name: '', years: 0}
+                }
             }
         });
     </script>
     </body>
 </html>
-
-
-
-
-
