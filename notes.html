@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>VueJS Frases</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+	<style type="text/css" media="screen">
+		.favorite {
+			color: #EFEF3E;
+		}
+	</style>
+</head>
+<body id="app">
+	<br>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<a href="/vuejs" class="btn btn-default pull-right"><i class="fa fa-home"></i></a>
+						<h2>Frases celebres VueJS</h2>
+						<form @submit.prevent="createFrase">
+							<div class="form-group">
+								<label for="author">Autor:</label>
+								<input v-model="frase_nueva.author" id="author" type="text" class="form-control"></input>
+							</div>
+							<div class="form-group">
+								<label for="text">Contenido de la nota:</label>
+								<textarea v-model="frase_nueva.text" id="text" class="form-control"></textarea>
+							</div>
+							<div class="form-group">
+								<button type="submit" class="btn btn-primary">Agregar frase</button>
+							</div>
+							<div class="form-group">
+								<h4>Mis frases:</h4>
+								<ol>
+									<li v-for="frase in frases" :class="{'text-primary': frase.favorite}">
+										{{ frase.text }} <b>{{ frase.author }}</b>
+										<button type="button" class="btn btn-xs btn-default" @click.prevent="favorite(frase)">
+											<i :class="{ fa:true, 'fa-star-o':!frase.favorite, 'fa-star':frase.favorite, favorite:frase.favorite }"></i>
+										</button>
+									</li>
+								</ol>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<pre>{{ $data | json }}</pre>
+			</div>
+		</div>
+	</div>
+	
+	<script src="vue.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		new Vue({
+			el: "#app",
+			data: {
+				frases: [
+					{
+						author: 'Aristóteles', 
+						text: 'El ignorante afirma, el sabio duda y reflexiona.',
+						favorite: false
+					},
+					{
+						author: 'Proverbio Chino', 
+						text: 'El sabio puede sentarse en un hormiguero, pero sólo el necio se queda sentado en él.',
+						favorite: false
+					},
+					{
+						author: 'Isaac Newton', 
+						text: 'Lo que sabemos es una gota de agua; lo que ignoramos es el océano.',
+						favorite: true
+					},
+					{
+						author: ' Immanuel Kant', 
+						text: 'El sabio puede cambiar de opinión. El necio, nunca.',
+						favorite: false
+					}
+				],
+				frase_nueva: { author: "", text: "", favorite:false }
+			},
+			methods: {
+				createFrase: function() {
+					if (this.frase_nueva.author === "") {
+						alert('La nota no tiene autor');
+						return false;
+					}
+					if (this.frase_nueva.text === "") {
+						alert('La nota está vacia');
+						return false;
+					}
+					this.frases.push(this.frase_nueva);
+
+					this.frase_nueva = { author: "", text: "", favorite:false };
+				},
+				favorite: function(frase) {
+					frase.favorite = !frase.favorite;
+				}
+			}
+		});
+	</script>
+</body>
+</html>
