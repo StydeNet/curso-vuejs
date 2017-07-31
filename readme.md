@@ -40,21 +40,33 @@ En esta segunda parte desarrollaremos el API para el módulo de notas, que en la
 
 *  [Creación de registros a través de un API](https://styde.net/creacion-de-registros-a-traves-de-un-api-con-laravel-5-2/) - 20:26
 
-*  Actualizar y eliminar registros a través de un API
+*  [Actualizar y eliminar registros de un API](https://styde.net/actualizar-y-eliminar-registros-a-traves-de-un-api-con-laravel-5-2/) - 17:31 
 
 ## Parte 3: Laravel + AJAX + Vue.js
 
 En esta tercera parte del curso, vamos a consumir una API con Vue.js para finalizar el desarrollo de nuestro módulo CRUD de notas totalmente en AJAX.
 
-*  Laravel + Vue.js = ♥
+*  [Laravel + Vue.js = ♥](https://styde.net/listar-registros-con-laravel-y-vue-js/) - 13:45 
+*  [Crear registros con Vue.js y Laravel](https://styde.net/crear-registros-con-vue-js-y-laravel-5-2/) - 11:01 
+*  [Actualizar notas con Laravel y Vue.js](https://styde.net/actualizar-notas-con-ajax-laravel-y-vue-js/) - 19:50 
+*  [Eliminar notas con Laravel y Vue.js](https://styde.net/eliminar-registros-con-vue-js-y-laravel-a-traves-de-ajax/) - 13:14 
 
-*  Crear registros con Vue.js y Laravel
+## Parte 4: Refactorización y nuevos features
 
-*  Actualizar notas con Laravel y Vue.js
+En esta parte 4 refactorizaremos el código AJAX para utilizar Vue Resource, realizaremos también animaciones con Vue.js, aprenderemos cómo podemos trabajar con componentes sin depender del “two way binding”, y más.
 
-> Este curso se encuentra en desarrollo, por favor regresa cada semana para ver las nuevas lecciones
+*  [Uso del componente Vue Resource](https://styde.net/uso-del-componente-vue-resource/) - 25:35 
+*  [Animaciones (transitions)](https://styde.net/animaciones-transiciones-en-vue-js/) - 16:55 
+*  [Eventos personalizados en Vue.js](https://styde.net/eventos-personalizados-en-vue-js/) - 10:04 
+*  [Browserify y Vueify con Gulp y Laravel Elixir](https://styde.net/vue-js-browserify-vueify-gulp-y-laravel-elixir/) - 19:35 
+*  [Componente App](https://styde.net/creacion-del-componente-app/) - 12:19 
+*  [Medidas de seguridad con Laravel y Vue.js](https://styde.net/medidas-de-seguridad-con-laravel-y-vue-js/) - 12:06 
 
+## Parte 5: Vue.js 2.0
 
+En esta parte 5, vamos a migrar nuestro módulo de notas a la nueva versión de Vue.js.
+
+*  [Migrando de Vue 1.x a Vue 2.0](https://styde.net/como-migrar-un-proyecto-de-vue-1-x-a-vue-2-0/) - 18:08 
 
 #### Otros cursos
 
