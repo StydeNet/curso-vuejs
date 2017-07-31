@@ -53,6 +53,10 @@
                 <template v-for="tech in techs">
                     <years-exp :years.sync="tech.years" :tech="tech.name"></years-exp>
                 </template>
+                <form class="form">
+                    <textarea v-model="new_tech.name" class="form-control"></textarea>
+                    <button @click.prevent="addTech" type="submit" class="btn btn-primary">Agregar Tecnologia</button>
+                </form>
 
                 <hr>
 
@@ -67,11 +71,25 @@
                 </p>
             </form>
 
-            <h3>Tienes experiencia en: </h3>
-            <ul>
-                <li v-for="tech in techs | orderBy 'years' -1 | years">{{ tech.name }}</li>
+            <h3>Tienes experiencia con backend en: </h3>
+            <ul v-for="tech in techs | orderBy 'years' -1 | years | back-end">
+                <li>{{ tech.name }}</li>
             </ul>
-            <hr>
+
+            <h3>Tienes experiencia con frontend en: </h3>
+            <ul v-for="tech in techs | orderBy 'years' -1 | years | front-end">
+                <li>{{ tech.name }}</li>
+            </ul>
+
+            <h3>Eres experto en: </h3>
+            <ul v-for="tech in techs | orderBy 'years' -1 | years | expert">
+                <li>{{ tech.name }}</li>
+            </ul>
+
+            <h3>No tienes experiencia en: </h3>
+            <ul v-for="tech in techs | noexp">
+                <li>{{ tech.name }}</li>
+            </ul>
 
             <pre>{{ $data | json }}</pre>
         </div>
@@ -92,6 +110,9 @@
                     class="btn"
                     @click="sub">-</button>
         </p>
+        <div class="form-group">
+            <strong class="text-primary">{{ exp_level }}</strong>
+        </div>
     </script>
 
     <script type="text/javascript">
@@ -107,6 +128,32 @@
                 return tech.years > 0;
             });
         });
+        Vue.filter('reversen', function (value) {
+            return this.name.split('').reverse().join('');
+        });
+        Vue.filter('back-end', function (techs) {
+            return techs.filter(function (tech) {
+                return tech.backend == true;
+            });
+        });
+
+        Vue.filter('front-end', function (techs) {
+            return techs.filter(function (tech) {
+                return tech.frontend == true;
+            });
+        });
+
+        Vue.filter('expert', function (techs) {
+            return techs.filter(function (tech) {
+                return tech.years > 5;
+            });
+        });
+
+        Vue.filter('noexp', function (techs) {
+            return techs.filter(function (tech) {
+                return tech.years < 1;
+            });
+        });
 
         Vue.component('years-exp', {
             template: '#years_template',
@@ -118,7 +165,22 @@
                     this.years--;
                 },
             },
-            props: ['years', 'tech']
+            props: ['years', 'tech'],
+            computed: {
+                exp_level: function () {
+                    if (this.years > 5) {
+                        return 'Experto'
+                    }
+                    if (this.years > 2) {
+                        return 'Intermedio'
+                    }
+                    if (this.years > 0) {
+                        return 'Principiante';
+                    } else {
+                        return " "
+                    }
+                }
+            }
         });
 
         new Vue({
@@ -129,12 +191,13 @@
                 gender: 'm',
                 spanish: true,
                 techs: [
-                    {name: 'PHP', years: 0},
-                    {name: 'JS', years: 0},
-                    {name: 'HTML', years: 0},
-                    {name: 'CSS', years: 0},
-                    {name: 'MySQL', years: 0},
-                ]
+                    {name: 'PHP', years: 0, backend: true},
+                    {name: 'JS', years: 0, frontend: true},
+                    {name: 'HTML', years: 0, frontend: true},
+                    {name: 'CSS', years: 0, frontend: true},
+                    {name: 'MySQL', years: 0, backend: true}
+                ],
+                new_tech: {name: '', years: 0}
             },
             computed: {
                 welcome_message: function () {
@@ -151,7 +214,10 @@
                     }
                     
                     return '';
-                } 
+                } ,
+                reverse_name: function () {
+                    return this.name.split('').reverse().join('');
+                },
             },
             methods: {
                 signUp: function (logout, event) {
@@ -163,6 +229,10 @@
                         alert("Saliendo del sistema...");
                     }
                 },
+                addTech: function() {
+                    this.techs.push(this.new_tech);
+                    this.new_tech = {name: '', years: 0}
+                }
             }
         });
     </script>

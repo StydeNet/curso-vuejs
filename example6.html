@@ -43,8 +43,12 @@
                 </label>
 
                 <template v-for="tech in techs">
-                    <years-exp :years="tech.years" :tech="tech.name"></years-exp>
+                    <years-exp :years.sync="tech.years" :tech="tech.name"></years-exp>
                 </template>
+                <form class="form">
+                    <textarea v-model="new_tech.name" class="form-control"></textarea>
+                    <button @click.prevent="addTech" type="submit" class="btn btn-primary">Agregar Tecnología</button>
+                </form>
 
                 <hr>
 
@@ -106,7 +110,8 @@
                     {name: 'PHP', years: 0},
                     {name: 'JS', years: 0},
                     {name: 'HTML', years: 0},
-                ]
+                ],
+                new_tech: {name: '', years: 0}
             },
             methods: {
                 signUp: function (logout, event) {
@@ -118,13 +123,12 @@
                         alert("Saliendo del sistema...");
                     }
                 },
+                addTech: function() {
+                    this.techs.push(this.new_tech);
+                    this.new_tech = {name: '', years: 0}
+                }
             }
         });
     </script>
     </body>
 </html>
-
-
-
-
-
