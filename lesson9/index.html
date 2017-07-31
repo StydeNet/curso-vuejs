@@ -8,7 +8,7 @@
         <title>Styde.net / Curso de VueJS / Lección 9</title>
 
         <!-- Bootstrap -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     </head>
     <body>
       <div class="row">
@@ -33,7 +33,14 @@
                         </td>
                     </template>
                     <template v-else>
-                        <td><input type="text" v-model="note.category_id" class="form-control"></td>
+                        <td>
+                            <select v-model="note.category_id" class="form-control">
+                                <option
+                                    v-for="category in categories"
+                                    :value="category.id"
+                                >{{ category.name }}</option>
+                            </select>
+                        </td>
                         <td><input type="text" v-model="note.note" class="form-control"></td>
                         <td><a href="#" @click="updateNote(note)"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></a></td>
                     </template>
@@ -41,7 +48,6 @@
               </table>
           </div>
       </div>
-
       <script src="vue.js"></script>
       <script src="main.js"></script>
     </body>
