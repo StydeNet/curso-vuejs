@@ -23,7 +23,7 @@
                 </h1>
 
                 <p>Espero que disfrutes tu visita</p>
-                <p>Tu nombre al revés es: {{ name.split('').reverse().join('') }}
+                <p>Tu nombre al revés es: {{ reverse_name }}
             </template>
             <p v-else>Por favor escribe tu nombre:</p>
 
@@ -54,7 +54,7 @@
                     <years-exp :years="tech.years" :tech="tech.name"></years-exp>
                 </template>
 
-                <hr>
+               <br>
 
                 <p v-show="name">
                     <button type="submit" class="btn btn-primary">
@@ -67,7 +67,7 @@
                 </p>
             </form>
 
-            <hr>
+           <br>
 
             <pre>{{ $data | json }}</pre>
         </div>
@@ -77,7 +77,7 @@
         <p>¿Cuántos años de experiencia tienes con {{ tech }}?</p>
 
         <p>
-            Respuesta: <strong>{{ years }}</strong>
+            Respuesta: <strong>{{ years }}</strong> 
 
             <button type="button"
                     class="btn"
@@ -87,7 +87,12 @@
                     :disabled="years == 0"
                     class="btn"
                     @click="sub">-</button>
+
+        <span v-show="level_experience">Nivel:</span><strong>{{ level_experience }}</strong>
+        
         </p>
+
+        
     </script>
 
     <script type="text/javascript">
@@ -102,7 +107,19 @@
                     this.years--;
                 },
             },
-            props: ['years', 'tech']
+            props: ['years', 'tech'],
+            computed:{
+                level_experience: function(){
+                    if(this.years == 0){
+                        return '';
+                    }else if(this.years <=2){
+                        return 'Principiante';
+                    }else if(this.years <= 5){
+                         return 'Intermedio';
+                    }
+                        return 'Experto';
+                }   
+            }
         });
 
         new Vue({
@@ -115,6 +132,8 @@
                 techs: [
                     {name: 'PHP', years: 0},
                     {name: 'JS', years: 0},
+                    {name: 'HTML', years: 0},
+                    {name: 'CSS', years: 0}
                 ]
             },
             computed: {
@@ -132,7 +151,14 @@
                     }
                     
                     return '';
-                } 
+                },
+                reverse_name: function(){
+                    if(this.first_name || this.last_name){
+                        var full_name = this.first_name +' '+ this.last_name;
+                        return full_name.split('').reverse().join('');
+                    }
+                    return '';
+                }
             },
             methods: {
                 signUp: function (logout, event) {
@@ -149,8 +175,3 @@
     </script>
     </body>
 </html>
-
-
-
-
-
